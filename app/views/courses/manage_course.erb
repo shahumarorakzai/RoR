@@ -1,0 +1,19 @@
+<div class="pageyield">
+<% unless flash[:notice].nil? %>
+  <%= flash[:notice] %>
+<% end %>
+
+<div class="link-div">
+  <% unless @courses.nil? %>
+    <ul>
+    <% @courses.each do |course| %>
+      <li>
+      <%= course.course_name %>
+      <%= link_to "Edit", edit_course_path(course) %>
+      <%= link_to "Delete", {:controller => "courses", :action => "delete", :id => course} %>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>
+                </div>

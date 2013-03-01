@@ -1,0 +1,38 @@
+<% @title = "user" %>
+<%= @institute.config_value %>
+<div class = "login-form" id ="login-form">
+	<%= form_for :users do |f| %>
+		<div class="field">
+			<div class="label-field">
+				<label for="username">Username</label>
+			</div>
+			<div class="input-field">
+				<%= f.text_field :username, :class => "inputfield" %>
+			</div>
+		</div>
+		<div class="field">
+			<div class="label-field">
+				<label for="password">Password</label>
+			</div>
+			<div class="input-field">
+				<%= f.password_field :password, :class => "inputfield"%>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="input-field">
+				<input type="checkbox" id="remember" />
+			</div>
+			<div class="label-field">
+				<label for="remember">Remember me</label>
+			</div>
+		</div>
+		<div class="field">
+			<%= submit_tag :login, :class => "submit" %>
+		</div>
+	<%if !flash.empty? %>
+		<%= flash[:notice] %>
+	<%end%>
+<%end%>
+</div>
+

@@ -1,0 +1,34 @@
+<% unless flash[:notice].nil? %>
+	<%= flash[:notice] %>
+<%end%>
+<div id="page-yield">
+<% if @user.admin? %>
+	<div id="head"><%= @user.username %></div>
+	
+	<div class="link-div">
+		<%= link_to "Admission", {:controller => "student", :action => "admission1"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Student Details", {:controller => "student", :action => "index"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Manage Users", {:controller => "user", :action => "index"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Manage News", {:controller => "news", :action => "index"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Examinations", {:controller => "exam", :action => "index"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Timetable", {:controller => "timetable", :action => "index"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Attendance", {:controller => "attendance", :action => "index"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Settings", {:controller => "configuration", :action => "index"}, :class => "link" %><br />
+	</div>
+
+<%end%>
+</div>

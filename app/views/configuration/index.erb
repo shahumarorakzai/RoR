@@ -1,0 +1,29 @@
+<% unless flash[:notice].nil? %>
+	<%= flash[:notice] %>
+<%end%>
+<div id="page-yield">
+
+
+	
+	<div class="link-div">
+		<%= link_to "Manage Course/Batch", {:controller => "courses", :action => "index" }, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Manage Student Category", {:controller => "student", :action => "categories"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Manage Subject", {:controller => "subjects"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "General Settings", {:controller => "configuration", :action => "settings"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "Add Admission Additional Detail", {:controller => "student", :action => "add_additional_details"}, :class => "link" %><br />
+	</div>
+	<div class="link-div">
+		<%= link_to "SMS module", {:controller => "sms"}, :class => "link" %><br />
+	</div>
+
+
+
+</div>

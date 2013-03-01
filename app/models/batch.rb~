@@ -1,0 +1,5 @@
+class Batch < ActiveRecord::Base
+  self.table_name "batches"
+  self.primary_id "id"
+  belongs_to :course, :primary_key => "id", :foreign_key => "course_id" 
+end

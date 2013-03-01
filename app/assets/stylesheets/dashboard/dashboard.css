@@ -1,0 +1,20 @@
+.link{}
+.link-div{
+	float: left;
+    	font-size: 16px;
+    	height: 138px;
+    	width: 240px;
+	
+}
+#page-yield{
+	padding-top: 50px;
+    	text-align: center;
+	
+}
+#head{
+	color: gray;
+    	font-size: 30px;
+    	line-height: 17px;
+    	margin-bottom: 65px;
+	
+}
